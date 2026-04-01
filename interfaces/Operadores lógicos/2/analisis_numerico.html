@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis Numérico Complejo</title>
+    <style>
+        /* Estilos básicos */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .contenedor-resultado { margin-top: 20px; padding: 15px; border: 1px solid #ddd; min-height: 50px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="number"], button { padding: 10px; margin-bottom: 10px; }
+        .error { color: red; font-weight: bold; }
+        .exito { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Análisis Condicional de Números</h1>
+    
+    <form id="analisisForm">
+        <div>
+            <label for="inputNumero">Introduce un número entero:</label>
+            <input type="number" id="inputNumero" placeholder="Número entero" required min="1" step="1">
+        </div>
+        
+        <button type="submit">Analizar</button>
+    </form>
+    
+    <div class="contenedor-resultado">
+        <p>Resultado: <span id="resultado">Esperando entrada...</span></p>
+    </div>
+
+    <script src="analisis.js"></script>
+
+</body>
+</html>

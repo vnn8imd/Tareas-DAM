@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array y Bucles Accesibles</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .contenedor { margin-top: 20px; padding: 15px; border: 1px solid #ccc; min-height: 100px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="number"], button { padding: 8px; margin-bottom: 10px; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+    <h1>Array y Bucles (Accesible)</h1>
+    
+    <form id="formArray">
+        <div>
+            <label for="inputCeldasArray">Número de Celdas del Array (Se requiere 10 para la lógica principal):</label>
+            <input type="number" id="inputCeldasArray" min="1" required placeholder="Introduce 10">
+        </div>
+        <button type="submit">Crear e Imprimir Array</button>
+    </form>
+
+    <div id="contenedorArray" class="contenedor">
+        <p>Introduce las dimensiones y haz clic en "Crear e Imprimir Array".</p>
+    </div>
+
+    <script src="array_celdas.js"></script> 
+</body>
+</html>

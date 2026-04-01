@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea - Visor de Nodos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            color: white;
+        }
+
+        /* 1. Aumentamos el ancho del contenedor principal */
+        .visor-container {
+            max-width: 1600px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-photo img {
+            width: 100%;
+            height: 450px;
+            /* Ajustado para mantener proporción con el nuevo ancho */
+            object-fit: cover;
+            border: 3px solid #fff;
+            border-radius: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 2. Ajustamos las miniaturas para que estén en una sola fila */
+        .thumbnails {
+            margin-top: 20px;
+            display: flex;
+            /* Cambiamos grid por flex */
+            justify-content: space-between;
+            /* Espacio uniforme entre ellas */
+            gap: 10px;
+        }
+
+        .miniatura {
+            /* 3. Magia de Flexbox: todas crecen y encogen por igual */
+            flex: 1;
+            width: 0;
+            /* Obliga a que el ancho se calcule por el flex-grow */
+            min-width: 50px;
+            /* Evita que desaparezcan si hay demasiadas */
+            height: 80px;
+            /* Altura fija para que todas sean iguales */
+            object-fit: cover;
+            /* Para que no se deformen al estirarse */
+            cursor: pointer;
+            border-radius: 4px;
+            opacity: 0.6;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+
+
+        .miniatura:hover,
+        .miniatura.activa {
+            opacity: 1;
+            border: 2px solid #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="visor-container">
+        <h1>Visor de Imágenes</h1>
+
+        <div class="main-photo">
+            <img id="foto-grande" src="img/Bici.jpg" alt="Producto Airless vista principal">
+        </div>
+
+        <div class="thumbnails">
+            <img class="miniatura" src="img/Bici.jpg" alt="Vista frontal" onclick="actualizarVisor(this)">
+            <img class="miniatura" src="img/Rueda_delantera.jpg" alt="Vista frontal" onclick="actualizarVisor(this)">
+            <img class="miniatura" src="img/Amortiguacion_2.jpg" alt="Vista frontal" onclick="actualizarVisor(this)">
+            <img class="miniatura" src="img/Cambios.jpg" alt="Vista lateral" onclick="actualizarVisor(this)">
+            <img class="miniatura" src="img/Cadena.jpg" alt="Detalle boquilla" onclick="actualizarVisor(this)">
+            <img class="miniatura" src="img/Sillín.jpg" alt="Uso en exteriores" onclick="actualizarVisor(this)">
+        </div>
+    </div>
+
+    <script>
+        /**
+ * Función para actualizar el nodo principal
+ * @param {HTMLElement} elemento - La miniatura que recibió el clic
+ */
+        function actualizarVisor(elemento) {
+            // 1. Obtener el nodo de la foto grande mediante su ID
+            const visor = document.getElementById("foto-grande");
+
+            // 2. Obtener la ruta de la miniatura clickeada
+            const nuevaRuta = elemento.getAttribute("src");
+            const nuevoAlt = elemento.getAttribute("alt");
+
+            // 3. Cambiar los atributos del nodo visor (setAttribute)
+            // Nota: En un caso real, la imagen grande podría tener un nombre distinto (ej: _thumb por _grande)
+            visor.setAttribute("src", nuevaRuta);
+            visor.setAttribute("alt", nuevoAlt);
+
+            // Opcional: Añadir una clase para resaltar la miniatura activa
+            removerActivos();
+            elemento.classList.add("activa");
+        }
+
+        function removerActivos() {
+            const minis = document.querySelectorAll(".miniatura");
+            minis.forEach(m => m.classList.remove("activa"));
+        }
+    </script>
+</body>
+
+</html>

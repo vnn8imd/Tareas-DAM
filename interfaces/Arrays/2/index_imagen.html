@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array de Imágenes Accesible (Final)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .contenedor { margin-top: 20px; padding: 15px; border: 1px solid #ccc; min-height: 250px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], button { padding: 8px; margin-bottom: 10px; }
+        .error { color: red; font-weight: bold; }
+        .exito { color: green; }
+    </style>
+</head>
+<body>
+
+    <h1>Búsqueda de Imágenes en Array (Final)</h1>
+    
+    <form id="formImagen">
+        <div>
+            <label for="inputImagen">Introduce el nombre de la imagen que deseas ver (gato, perro, pajaro, pez, arbol):</label>
+            <input type="text" id="inputImagen" required placeholder="Ej: perro">
+        </div>
+        <button type="submit">Mostrar Imagen</button>
+    </form>
+
+    <div id="contenedorResultado" class="contenedor">
+        <p>Aquí aparecerá la imagen solicitada.</p>
+    </div>
+
+    <script src="mostrar_imagen.js"></script> 
+</body>
+</html>

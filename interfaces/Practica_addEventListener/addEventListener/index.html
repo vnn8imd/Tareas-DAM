@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Notas de Alumnos</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); max-width: 600px; margin: auto; }
+        h1 { text-align: center; color: #333; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input[type="text"], input[type="number"] { width: calc(100% - 22px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px; width: 100%; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+        #resultado { margin-top: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 4px; background-color: #e9ecef; }
+        .image-container { text-align: center; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Notas y Promoción</h1>
+        <div class="image-container">
+            
+        </div>
+
+        <form id="notasForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido1">Primer Apellido:</label>
+            <input type="text" id="apellido1" name="apellido1" required>
+
+            <label for="apellido2">Segundo Apellido:</label>
+            <input type="text" id="apellido2" name="apellido2" required>
+
+            <h2>Notas (0 - 10)</h2>
+            <label for="nota1">Nota Asignatura 1:</label>
+            <input type="number" id="nota1" name="nota1" min="0" max="10" step="0.1" required>
+
+            <label for="nota2">Nota Asignatura 2:</label>
+            <input type="number" id="nota2" name="nota2" min="0" max="10" step="0.1" required>
+
+            <label for="nota3">Nota Asignatura 3:</label>
+            <input type="number" id="nota3" name="nota3" min="0" max="10" step="0.1" required>
+
+            <button type="submit">Calcular Resultados</button>
+        </form>
+
+        <div id="resultado">
+            **Resultados del Alumno:**
+            <p id="datosAlumno"></p>
+            <p id="promedioFinal"></p>
+            <p id="calificativo"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+CREATE DATABASE IF NOT EXISTS IDIOMAS;
+
+CREATE TABLE IF NOT EXISTS alumnos (
+
+cod_curso VARCHAR(10) NOT NULL,
+nombre CHAR(15) NOT NULL,
+apellidos VARCHAR(35) NOT NULL,
+dni CHAR(16) NOT NULL UNIQUE,
+direccion VARCHAR(60) NOT NULL,
+f_nac DATE NOT NULL,
+sexo ENUM('H','M') NOT NULL,
+PRIMARY KEY(cod_curso)
+);
+
+ALTER TABLE alumnos ADD FOREIGN KEY (cod_curso) REFERENCES curso (codcursox);
+
+
+CREATE TABLE IF NOT EXISTS profesores (
+
+id_profesor INT(4),
+dni_p CHAR(16) NOT NULL UNIQUE,
+nombre_p CHAR(15) NOT NULL,
+apellidos_p VARCHAR(35) NOT NULL,
+direccion_p VARCHAR(60) NOT NULL,
+titulo ENUM('LDO','DDO','CFGS') NOT NULL,
+p_hora DECIMAL(5,2) NOT NULL,
+PRIMARY KEY(id_profesor)
+);
+
+ALTER TABLE profesores ADD CONSTRAINT p_hora CHECK (p_hora>0); 
+ALTER TABLE profesores ADD FOREIGN KEY (id_profesor) REFERENCES curso (id_profesor);
+
+CREATE TABLE IF NOT EXISTS curso (
+
+codcursox VARCHAR(10) NOT NULL,
+id_profesor INT(4),
+nombre_c CHAR(15) NOT NULL,
+num_tot_horas INT(10) NOT NULL,
+n_alum INT(3) NOT NULL,
+f_ini DATE NOT NULL,
+f_fin DATE NOT NULL,
+PRIMARY KEY(codcursox,id_profesor)
+);
+
+ALTER TABLE curso ADD CONSTRAINT num_tot_horas CHECK (num_tot_horas >= 80); 
+ALTER TABLE curso ADD CONSTRAINT n_alum CHECK (n_alum>9);
+ALTER TABLE curso ADD CONSTRAINT f_fin CHECK (f_fin>f_ini); 
+
+
+
+
+
+
+
+
+

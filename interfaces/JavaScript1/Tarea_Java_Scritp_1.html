@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversión de Moneda con JavaScript</title>
+</head>
+<body>
+
+    <h1>Tarea de Introducción a JavaScript</h1>
+    <p>El script de conversión se ejecutará automáticamente al cargar la página.</p>
+
+    <script>
+        // Pega el código JavaScript de arriba aquí
+        const TASA_CONVERSION = 0.87;
+        let importeEuros = prompt("Introduce el importe en Euros (€) para convertirlo a Libras (£):");
+        
+        if (importeEuros !== null) {
+            let euros = parseFloat(importeEuros);
+            
+            if (!isNaN(euros) && euros >= 0) {
+                let importeLibras = euros * TASA_CONVERSION;
+                
+                document.write("<h2>Conversión de Moneda</h2>");
+                document.write("<p>Importe introducido: **" + euros.toFixed(2) + " Euros (€)**</p>");
+                document.write("<p>Tasa de conversión: **1€ = " + TASA_CONVERSION + "£**</p>");
+                document.write("<p>Equivalencia en Libras: **" + importeLibras.toFixed(2) + " Libras (£)**</p>");
+                
+            } else {
+                alert("Error: Por favor, introduce un número válido y positivo.");
+                document.write("<p>No se pudo realizar la conversión. Por favor, recarga la página e introduce un valor numérico válido.</p>");
+            }
+        } else {
+            document.write("<p>El usuario canceló la operación de conversión.</p>");
+        }
+    </script>
+
+</body>
+</html>

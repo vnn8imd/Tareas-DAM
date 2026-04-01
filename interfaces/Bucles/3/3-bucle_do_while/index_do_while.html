@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla DO...WHILE Accesible</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .contenedor { margin-top: 20px; padding: 15px; border: 1px solid #ccc; min-height: 100px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="number"], button { padding: 8px; margin-bottom: 10px; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+    <h1>Generador de Tabla Accesible (Bucle DO...WHILE)</h1>
+    
+    <form id="formTabla">
+        <div>
+            <label for="inputFilas">Número de Filas:</label>
+            <input type="number" id="inputFilas" min="1" required placeholder="Ej: 5">
+        </div>
+        <div>
+            <label for="inputCeldas">Número de Celdas/Columnas:</label>
+            <input type="number" id="inputCeldas" min="1" required placeholder="Ej: 3">
+        </div>
+        <button type="submit">Crear Tabla</button>
+    </form>
+
+    <div id="contenedorTabla" class="contenedor">
+        <p>Introduce las dimensiones y haz clic en "Crear Tabla".</p>
+    </div>
+
+    <script src="tabla_do_while.js"></script> 
+</body>
+</html>

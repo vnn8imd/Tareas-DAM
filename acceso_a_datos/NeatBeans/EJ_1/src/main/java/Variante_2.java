@@ -1,0 +1,115 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Variante_2 {
+    
+        public static void main(String[] args) {
+        
+        String rutaBase = "C:\\AD\\EJERCICIOS\\VARIANTE2"; //Definimos la ruta donde vamos a trabajar
+        File dirBase = new File(rutaBase); //Representa la carpeta C:\\AD\\EJERCICIOS
+        String nombreDir = "nuevoDirectorio"; //Definimos variable de nuevoDirectorio
+        File nuevoDirectorio = new File(dirBase, nombreDir); //Directorio nuevo
+        File fichero1 = new File(nuevoDirectorio, "fichero_de_texto.txt");//Fichero dentro del nuevo directorio
+        File fichero2 = new File(nuevoDirectorio, "fichero_de_texto2.txt");//Fichero2 dentro del nuevo directorio
+        
+        // Crear el directorio base si no existe
+        if (!dirBase.exists()) {
+            dirBase.mkdirs();
+            System.out.println("Directorio base creado: " + dirBase.getAbsolutePath());
+        }
+
+        
+        try (Scanner sc = new Scanner(System.in)){ //Crear un Scanner para leer del teclado
+            boolean Salir =false; //Variable de control para salir del menú
+        
+        while (!Salir) {
+            System.out.println("\n--- MENÚ ---"); //Menú acceso a datos
+            System.out.println("1) Crear directorio nuevoDirectorio (y fichero_de_texto.txt dentro)");
+            System.out.println("2) Crear fichero fichero_de_texto2.txt en nuevoDirectorio");
+            System.out.println("3) Eliminar fichero fichero_de_texto.txt");
+            System.out.println("4) Eliminar directorio nuevoDirectorio");
+            System.out.println("5) Salir");
+            System.out.print("Elige una opción: ");
+            int opcion = sc.nextInt();
+            sc.nextLine(); // Limpiar buffer
+
+            switch (opcion) {
+                
+                case 1 -> {
+                    if (!nuevoDirectorio.exists()) {
+                        if (nuevoDirectorio.mkdir()) {
+                            System.out.println("Directorio creado: " + nuevoDirectorio.getAbsolutePath());
+                            // Crear fichero_de_texto.txt automáticamente
+                            
+                            try (FileWriter fw = new FileWriter(fichero1)) {
+                                fw.write("Este es el contenido inicial de fichero_de_texto.txt");
+                                System.out.println("Fichero creado: " + fichero1.getAbsolutePath());
+                            } catch (IOException e) {
+                                System.out.println("Error al crear el fichero: " + e.getMessage());
+                            }
+                        } else {
+                            System.out.println("No se pudo crear el directorio.");
+                        }
+                    } else {
+                        System.out.println("El directorio ya existe.");
+                    }
+                    }
+
+                case 2 -> {
+                    if (!nuevoDirectorio.exists()) {
+                        System.out.println("Se debe crear el directorio nuevoDirectorio.");
+                    } else {
+                        try (FileWriter fw = new FileWriter(fichero2)) {
+                            fw.write("Contenido del fichero fichero_de_texto2.txt");
+                            System.out.println("Fichero creado: " + fichero2.getAbsolutePath());
+                        } catch (IOException e) {
+                            System.out.println("Error al crear el fichero: " + e.getMessage());
+                        }
+                    }
+                    }
+
+                case 3 -> {
+                    if (fichero1.exists()) {
+                        if (fichero1.delete()) {
+                            System.out.println("Fichero eliminado correctamente.");
+                        } else {
+                            System.out.println("No se pudo eliminar el fichero.");
+                        }
+                    } else {
+                        System.out.println("El fichero fichero_de_texto.txt no existe.");
+                    }
+                    }
+
+                case 4 -> {
+                    if (nuevoDirectorio.exists()) {
+                        File[] archivos = nuevoDirectorio.listFiles();
+                        if (archivos != null && archivos.length > 0) {
+                            System.out.println("El directorio no está vacío. Eliminando contenido...");
+                            for (File f : archivos) {
+                                f.delete();
+                            }
+                        }
+                        if (nuevoDirectorio.delete()) {
+                            System.out.println("Directorio eliminado correctamente.");
+                        } else {
+                            System.out.println("No se pudo eliminar el directorio.");
+                        }
+                    } else {
+                        System.out.println("El directorio no existe.");
+                    }
+                    }
+
+                case 5 -> {
+                        System.out.println("Saliendo del programa...");
+                        Salir = true;
+                    }
+
+                    default -> System.out.println("Opción no válida. Inténtalo de nuevo.");
+                }
+            }
+        }
+    }
+}
+

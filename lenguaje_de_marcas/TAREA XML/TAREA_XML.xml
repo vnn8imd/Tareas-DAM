@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!-- Archivo XML que representa la estructura de una biblioteca --> 
+
+ <biblioteca> 
+
+     <!-- Sección de libros disponibles en la biblioteca --> 
+
+    <libros> 
+
+        <libro> 
+
+            <titulo>1984</titulo> 
+
+            <autor>George Orwell</autor> 
+
+            <isbn>9780451524935</isbn> 
+
+            <categoria>novela</categoria> 
+
+            <disponible>true</disponible> 
+
+        </libro> 
+
+        <libro> 
+
+            <titulo>Breve historia del tiempo</titulo> 
+
+            <autor>Stephen Hawking</autor> 
+
+            <isbn>9780553176988</isbn> 
+
+            <categoria>ciencia</categoria> 
+
+            <disponible>false</disponible> 
+
+        </libro> 
+
+    </libros> 
+
+     <!-- Sección de autores registrados en la biblioteca --> 
+
+    <autores> 
+
+        <autor> 
+
+            <nombre>George Orwell</nombre> 
+
+            <nacionalidad>Británica</nacionalidad> 
+
+            <libros_escritos> 
+
+                <libro>1984</libro> 
+
+                <libro>Rebelión en la granja</libro> 
+
+            </libros_escritos> 
+
+        </autor> 
+
+        <autor> 
+
+            <nombre>Stephen Hawking</nombre> 
+
+            <nacionalidad>Británica</nacionalidad> 
+
+            <libros_escritos> 
+
+                <libro>Breve historia del tiempo</libro> 
+
+                <libro>El universo en una cáscara de nuez</libro> 
+
+            </libros_escritos> 
+
+        </autor> 
+
+    </autores> 
+
+  
+
+    <!-- Sección de usuarios que han tomado libros en préstamo --> 
+
+    <usuarios> 
+
+        <usuario> 
+
+            <nombre>Lucía Martínez</nombre> 
+
+            <id>U001</id> 
+
+            <prestamos> 
+
+                <libro>Breve historia del tiempo</libro> 
+
+            </prestamos> 
+
+        </usuario> 
+
+        <usuario> 
+
+            <nombre>Carlos Gómez</nombre> 
+
+            <id>U002</id> 
+
+            <prestamos /> 
+
+        </usuario> 
+
+    </usuarios> 
+
+  
+
+</biblioteca> 

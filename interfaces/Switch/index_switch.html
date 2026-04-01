@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea SWITCH Accesible Final</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .contenedor { margin-top: 20px; padding: 15px; border: 1px solid #ccc; min-height: 250px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], button { padding: 8px; margin-bottom: 10px; }
+        .error { color: red; font-weight: bold; }
+        .menu-activo { border: 1px solid #0056b3; padding: 15px; margin-bottom: 20px; }
+        img { display: block; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1 id="tituloPrincipal">¿Deseas jugar con JavaScript? (Responde SI o NO)</h1>
+    
+    <form id="formPrincipal">
+        <div>
+            <label for="inputInicio">Respuesta:</label>
+            <input type="text" id="inputInicio" required placeholder="SI o NO">
+        </div>
+        <button type="submit">Responder</button>
+    </form>
+
+    <div id="contenedorResultado" class="contenedor">
+        <p>Aquí se mostrarán los resultados de tu elección.</p>
+    </div>
+
+    <script src="tarea_switch.js"></script> 
+</body>
+</html>

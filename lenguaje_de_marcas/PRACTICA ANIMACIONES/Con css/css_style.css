@@ -1,0 +1,41 @@
+/* Estilo para el cuerpo de la página */
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilo base para todas las imágenes */
+.imagen {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: all 0.8s ease; /* Transición de todas las propiedades */
+}
+
+/* Estilo al pasar el cursor sobre las imágenes */
+.imagen:hover {
+    opacity: 0.7; /* Cambio de opacidad */
+    width: 350px; /* Cambio de tamaño */
+    height: 250px; /* Cambio de tamaño */
+    border-radius: 100%; /* Cambio de border-radius */
+}
+
+/* Estilo para la imagen 1 */
+.imagen1 {
+    border: 3px solid #ff6347;
+}
+
+/* Estilo para la imagen 2 */
+.imagen2 {
+    border: 3px solid #4682b4;
+}
+
+/* Estilo para la imagen 3 */
+.imagen3 {
+    border: 3px solid #32cd32;
+}

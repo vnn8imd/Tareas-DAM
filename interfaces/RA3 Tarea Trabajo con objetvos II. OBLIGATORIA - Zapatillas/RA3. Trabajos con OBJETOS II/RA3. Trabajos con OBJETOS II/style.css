@@ -1,0 +1,45 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    padding: 20px;
+}
+
+
+.zapatilla-card {
+    background-color: #fff;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif; 
+    flex-direction: column;
+}
+
+
+.img-container {
+   
+    margin-bottom: 10px;
+    width: 100%; 
+    height: 200px; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.zapatilla-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;    
+    display: block;
+}
+
+.zapatilla-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px 0;
+}
+
+.zapatilla-card p {
+    margin: 2px 0;
+   
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis de Paridad Accesible</title>
+    <style>
+        /* Estilos básicos para la presentación */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .contenedor-resultado { margin-top: 20px; padding: 15px; border: 1px solid #ddd; min-height: 50px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="number"], button { padding: 10px; margin-bottom: 10px; }
+        .error { color: red; font-weight: bold; }
+        .exito { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Verificación de Número (Operador NOT)</h1>
+    
+    <form id="paridadForm">
+        <div>
+            <label for="inputNumero">Introduce un número entero (Debe ser mayor que cero):</label>
+            <input type="number" id="inputNumero" placeholder="Ej: 42" required min="1" step="1">
+        </div>
+        
+        <button type="submit">Comprobar Paridad</button>
+    </form>
+    
+    <div class="contenedor-resultado">
+        <p>Resultado: <span id="resultado">Esperando entrada...</span></p>
+    </div>
+
+    <script src="paridad.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Ignorar archivos comprimidos
+*.zip
+*.rar
+*.7z
+
+# Ignorar archivos compilados de Java
+*.class
+target/
+bin/
+build/
+
+# Ignorar imágenes pesadas si no son necesarias
+*.jpg
+*.png
+*.webp

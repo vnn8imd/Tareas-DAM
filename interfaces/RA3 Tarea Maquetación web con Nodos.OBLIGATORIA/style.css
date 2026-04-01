@@ -1,0 +1,78 @@
+/* Estilos necesarios para que los nodos se vean bien */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 15px;
+}
+
+.navbar {
+    background: red;
+    padding: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    width: 50%;
+    border: 1px solid #ccc;
+}
+
+.banner-img {
+    width: 100%;
+    margin: 20px 0 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.btn-red {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}

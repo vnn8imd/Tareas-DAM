@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea - GESTION DE NODOS II (Con Array)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 800px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            text-align: left;
+        }
+
+        #imagen-viaje {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .info-container {
+            flex: 1;
+        }
+
+        #mensaje-destino {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>¿Donde quieres viajar?</h1>
+
+        <div class="card">
+            <img id="imagen-viaje" src="img/viajes.jpg" alt="Imagen de bienvenida">
+
+            <div class="info-container">
+                <p id="mensaje-destino">Selecciona un destino para comenzar</p>
+
+                <label for="paises">Elige un país:</label>
+                <select id="paises" onchange="cambiarDestino()">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Italia">Italia</option>
+                    <option value="Alemania">Alemania</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="España">España</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Ahora es un ARRAY de objetos (fíjate en los corchetes [])
+        const datosDestinos = [
+            { nombre: "Francia", img: "img/Francia.jpg", texto: "Su destino es Francia" },
+            { nombre: "Italia", img: "img/Italia.jpg", texto: "Su destino es Italia" },
+            { nombre: "Alemania", img: "img/Alemania.jpg", texto: "Su destino es Alemania" },
+            { nombre: "Portugal", img: "img/Portugal.jpg", texto: "Su destino es Portugal" },
+            { nombre: "España", img: "img/Espana.jpg", texto: "Su destino es España" }
+        ];
+
+        function cambiarDestino() {
+            const seleccion = document.getElementById("paises").value;
+            const imagenNodo = document.getElementById("imagen-viaje");
+            const textoNodo = document.getElementById("mensaje-destino");
+
+            // 2. Búsqueda dentro del Array
+            // Usamos .find() para buscar el objeto cuyo "nombre" coincida con la "seleccion"
+            const destinoEncontrado = datosDestinos.find(item => item.nombre === seleccion);
+
+            if (destinoEncontrado) {
+                // 3. Aplicar cambios usando los datos del objeto encontrado
+                imagenNodo.setAttribute("src", destinoEncontrado.img);
+                imagenNodo.setAttribute("alt", "Paisaje de " + destinoEncontrado.nombre);
+                textoNodo.innerText = destinoEncontrado.texto;
+            } else {
+                // Estado inicial
+                imagenNodo.setAttribute("src", "img/viajes.jpg");
+                textoNodo.innerText = "Selecciona un destino para comenzar";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS COCHES (
+mat CHAR(10) NOT NULL,
+marca CHAR (15) NOT NULL,
+an_fab YEAR NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS MECANICOS (
+dni CHAR(9) NOT NULL,
+nombre CHAR (15) NOT NULL,
+puesto CHAR (15) NOT NULL,
+turno INT CHECK ('MAN' OR 'TAR')
+);
+
+CREATE TABLE IF NOT EXISTS TRABAJOS (
+mat_t CHAR(10) NOT NULL,
+dni_t CHAR (9),
+horas DECIMAL (4,1) NOT NULL,
+fecha_rep DATE NOT NULL
+PRIMARY KEY (mat_t, dni_t)
+);
+
+
+Usar tabla trabajos:
+ALTER TABLE trabajos ADD FOREIGN KEY (dni_t) references mecanicos (dni);
+

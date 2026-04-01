@@ -1,0 +1,68 @@
+body
+{
+    color:green;
+}
+
+#h1
+{
+    color:red;
+}
+
+#h2
+{
+    color:orange;
+}
+
+#div1
+{
+    background-color: yellow;
+}
+
+#div2
+{
+    background-color:grey;
+}
+
+#formato
+{
+    font-style: italic;
+    color:rgb(227, 79, 188)
+}
+
+#formato2
+{
+    font-weight: bold;
+    color:crimson;
+    border: 2px crimson solid;
+}
+
+#formato3
+{
+    font-style:italic;
+    color:rgb(234, 139, 155);
+    border: 2px rgb(234,139,155) solid;
+}
+
+#formato4
+{
+    text-decoration:underline;
+    color:rgb(97, 17, 108);
+}
+
+#formato5
+{
+    background-color:rgb(214, 222, 51); 
+    border: 2px blue solid;
+}
+
+#formato6
+{
+    background-color:rgb(10, 10, 10);
+}
+
+#formato7
+{
+    font-style: italic;
+    color:rgb(97, 5, 14);
+}
+
