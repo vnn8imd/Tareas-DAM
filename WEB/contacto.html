@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - El Mejor Brunch</title> 
+    <link rel="stylesheet" href="css/css1.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="logo-container">
+                <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="menu.html" class="nav-button">MENÚ</a></li>
+                <li><a href="galeria.html" class="nav-button">GALERÍA</a></li>
+                <li><a href="reservas.html" class="nav-button">RESERVAS</a></li>
+                <li><a href="takeaway.html" class="nav-button">TAKE AWAY</a></li>
+                <li><a href="donde_estamos.html" class="nav-button">DÓNDE ESTAMOS</a></li>
+                <li><a href="contacto.html" class="nav-button active">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formulario-container">
+            <h2>Contacto</h2>
+            <p style="text-align: center;">¿Tienes dudas? ¡Escríbenos!</p>
+            <form action="gracias.html" method="post">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Tu mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div id="links-pie">
+            <a href="redes-sociales.html">REDES SOCIALES</a>
+            <a href="politica-cookies.html">POLÍTICA DE COOKIES</a>
+            <a href="aviso-legal.html">AVISO LEGAL</a>
+        </div>
+        <p>© 2025 Veronica Nicolas. 1º DAM</p>
+    </footer>                                    
+</body>
+</html>

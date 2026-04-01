@@ -10,6 +10,6 @@ bin/
 build/
 
 # Ignorar imágenes pesadas si no son necesarias
-*.jpg
-*.png
-*.webp
+# *.jpg
+# *.png
+# *.webp
