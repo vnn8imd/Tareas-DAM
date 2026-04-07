@@ -1,0 +1,29 @@
+PASOS A SEGUIR
+---------------
+.json    Repositorio de datos
+.js      Leer el repositorio de datos de json
+.html    Cargar el archivo .js que va a leer el json
+Creando una conexión asincrónica con AJAX
+
+1.Creamos una variable que almacena los datos de la conexión
+let conexion=new XMLHttpRequest();
+
+2.Abrir el documento .json, coger los datos con el método
+  conexión.open("GET","concesionario.json");  
+  //enviamos la petición al servidor
+  conexión.send();
+
+3. Comprobamos el estado de la petición.:
+   //valores predefinidos, si se cumple la condición la conexión se establece 
+   if(conexión.readyState==4 && conexión.status==200)
+	{
+	//Lanzamos las instrucciones correspondientes
+        let datos=JSON.parse(conexión.responseText);
+        console.log(datos);
+        }
+
+4. Para recorrer los datos, utilizo un forEach()
+
+
+
+

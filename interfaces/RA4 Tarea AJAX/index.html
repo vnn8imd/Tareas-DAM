@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XAMPP Fetch Example</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 40px; line-height: 1.6; }
+        button { 
+            padding: 10px 20px; 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        }
+        button:hover { background-color: #0056b3; }
+        #contenedor { 
+            margin-top: 20px; 
+            padding: 15px; 
+            border: 2px solid #eee; 
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            min-height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Cargar JSON con AJAX (Fetch API)</h2>
+    <button id="btnCargar">Cargar información</button>
+    <div id="contenedor">Haz clic en el botón para ver el contenido...</div>
+
+    <script>
+        document.getElementById('btnCargar').addEventListener('click', () => {
+            // Fetch busca el archivo relativo a la ubicación del index.html
+            fetch('datos.json')
+                .then(response => {
+                    if (!response.ok) throw new Error("No se encontró el archivo datos.json");
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('contenedor').innerHTML = `<strong>Mensaje:</strong> ${data.mensaje}`;
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    document.getElementById('contenedor').textContent = "Error al cargar los datos.";
+                });
+        });
+    </script>
+</body>
+</html>

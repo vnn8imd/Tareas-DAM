@@ -1,0 +1,48 @@
+{
+  "catalogo_peliculas": [
+    {
+      "titulo": "Inception",
+      "año_estreno": 2010,
+      "genero": "Ciencia ficción / Acción",
+      "duracion_minutos": 148,
+      "actores_principales": [
+        "Leonardo DiCaprio",
+        "Joseph Gordon-Levitt",
+        "Elliot Page"
+      ]
+    },
+    {
+      "titulo": "Parasite",
+      "año_estreno": 2019,
+      "genero": "Thriller / Drama",
+      "duracion_minutos": 132,
+      "actores_principales": [
+        "Song Kang-ho",
+        "Lee Sun-kyun",
+        "Cho Yeo-jeong"
+      ]
+    },
+    {
+      "titulo": "Pulp Fiction",
+      "año_estreno": 1994,
+      "genero": "Crimen / Humor negro",
+      "duracion_minutos": 154,
+      "actores_principales": [
+        "John Travolta",
+        "Uma Thurman",
+        "Samuel L. Jackson"
+      ]
+    },
+    {
+      "titulo": "Spirited Away",
+      "año_estreno": 2001,
+      "genero": "Animación / Fantasía",
+      "duracion_minutos": 125,
+      "actores_principales": [
+        "Rumi Hiiragi",
+        "Miyu Irino",
+        "Mari Natsuki"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Tarea TRABAJO JSON
+
+Crea un archivo en formato JSON que almacene la información de un estudiante. El documento deberá contener:
+
+Nombre
+Apellidos
+Edad
+Curso actual
+Lista de asignaturas matriculadas (mínimo 3)
+Tareas a realizar:
+
+Diseña el archivo JSON con todos los datos solicitados.
+Añade una nueva asignatura a la lista.

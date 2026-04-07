@@ -1,0 +1,14 @@
+{
+  "estudiante": {
+    "nombre": "Lucas",
+    "apellidos": "Familiar de Paz",
+    "edad": 28,
+    "curso_actual": "Tercer Año - Grado en Ingeniería Informática",
+    "asignaturas_matriculadas": [
+      "Estructuras de Datos",
+      "Sistemas de Gestión Empresarial",
+      "Bases de Datos",
+      "Ciberseguridad"
+    ]
+  }
+}

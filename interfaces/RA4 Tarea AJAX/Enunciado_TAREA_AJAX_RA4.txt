@@ -1,0 +1,17 @@
+1.Crea un archivo index.html que tenga:
+
+Un botón con el texto “Cargar información”.
+
+Un contenedor <div> vacío donde se mostrará el resultado.
+
+
+
+2.Crea un archivo datos.json o datos.txt con información simple, por ejemplo:
+
+JSON{ 
+
+ "mensaje": "Hola, este texto viene desde un archivo externo."}
+
+3.Cuando se pulsa el botón  se muestra el obtener el contenido del archivo.
+
+4.Mostrar la información dentro del <div> sin recargar la página.

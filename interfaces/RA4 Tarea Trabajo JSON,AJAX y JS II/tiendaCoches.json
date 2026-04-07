@@ -1,0 +1,63 @@
+[
+  {
+    "marca": "BMW",
+    "modelo": "Serie 3 Coupe",
+    "kilometros": 120000,
+    "anyo": 2012,
+    "precio": 15500,
+    "motor": "Diesel",
+    "foto": "bmw.jpg",
+    "disponible": true
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "500C",
+    "kilometros": 45000,
+    "anyo": 2018,
+    "precio": 11000,
+    "motor": "Gasolina",
+    "foto": "fiat.jpg",
+    "disponible": true
+  },
+  {
+    "marca": "Volkswagen",
+    "modelo": "Golf",
+    "kilometros": 98000,
+    "anyo": 2015,
+    "precio": 13900,
+    "motor": "Diesel",
+    "foto": "golf.jpg",
+    "disponible": false
+  },
+  {
+    "marca": "Subaru",
+    "modelo": "Tribeca",
+    "kilometros": 150000,
+    "anyo": 2010,
+    "precio": 9500,
+    "motor": "Gasolina",
+    "foto": "subaru.jpg",
+    "disponible": true
+  },  
+  {
+    "marca": "Opel",
+    "modelo": "Insignia",
+    "kilometros": 85000,
+    "anyo": 2014,
+    "precio": 12500,
+    "motor": "Diesel",
+    "foto": "opel.jpg",
+    "disponible": true
+  },
+  {
+    "marca": "Peugeot",
+    "modelo": "508",
+    "kilometros": 92000,
+    "anyo": 2016,
+    "precio": 14200,
+    "motor": "Diesel",
+    "foto": "peugeot.jpg",
+    "disponible": true
+  }
+ 
+]

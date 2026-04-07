@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+  <producto>
+    <nombre>Smartphone Galaxy X1</nombre>
+    <descripcion>Teléfono inteligente de alta gama con pantalla infinita.</descripcion>
+    <precio moneda="USD">899.99</precio>
+    <caracteristicas>
+      <caracteristica nombre="Pantalla">AMOLED 6.7 pulgadas</caracteristica>
+      <caracteristica nombre="Procesador">Snapdragon 8 Gen 3</caracteristica>
+      <caracteristica nombre="Memoria">12GB RAM</caracteristica>
+    </caracteristicas>
+  </producto>
+
+  <producto>
+    <nombre>Laptop UltraBook Pro</nombre>
+    <descripcion>Computadora portátil ligera ideal para diseño y productividad.</descripcion>
+    <precio moneda="USD">1250.00</precio>
+    <caracteristicas>
+      <caracteristica nombre="Pantalla">Retina 14.2 pulgadas</caracteristica>
+      <caracteristica nombre="Procesador">Apple M3 Pro</caracteristica>
+      <caracteristica nombre="Memoria">16GB RAM Unificada</caracteristica>
+    </caracteristicas>
+  </producto>
+</catalogo>

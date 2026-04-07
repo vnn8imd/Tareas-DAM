@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canalcar | Concesionario de Ocasión</title>
+<style>
+    :root {
+        --primary: #0f172a; /* Azul noche muy oscuro */
+        --accent: #3b82f6;  /* Azul eléctrico moderno */
+        --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        --bg: #020617;      /* Fondo casi negro */
+        --card-bg: #1e293b; /* Gris azulado para tarjetas */
+        --text-main: #f8fafc;
+        --text-dim: #94a3b8;
+    }
+
+    body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background-color: var(--bg);
+        color: var(--text-main);
+        margin: 0;
+        padding: 40px 20px;
+        line-height: 1.6;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        background: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        color: var(--text-dim);
+        font-size: 1.1rem;
+    }
+
+    /* Grid optimizado */
+    .grid-coches {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 25px;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    /* Tarjeta de Coche Estilo Premium */
+    .coche-card {
+        background: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 24px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .coche-card:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba(59, 130, 246, 0.5);
+    }
+
+    .coche-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .coche-card:hover img {
+        transform: scale(1.1);
+    }
+
+    .info-container {
+        padding: 24px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(180deg, rgba(30, 41, 59, 0) 0%, rgba(15, 23, 42, 0.8) 100%);
+    }
+
+    .coche-card h3 {
+        margin: 0 0 8px 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .specs {
+        font-size: 0.95rem;
+        color: var(--text-dim);
+        margin-bottom: 20px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* Etiquetas de precio más potentes */
+    .precio-tag {
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: #fff;
+        margin-top: auto;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Badges flotantes */
+    .badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        z-index: 2;
+        backdrop-filter: blur(8px);
+    }
+
+    .disponible { 
+        background: rgba(34, 197, 94, 0.2); 
+        color: #4ade80;
+        border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+    
+    .vendido { 
+        background: rgba(239, 68, 68, 0.2); 
+        color: #f87171;
+        border: 1px solid rgba(248, 113, 113, 0.3);
+    }
+
+    /* Scrollbar personalizada */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--bg);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--accent);
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Vehículos</h1>
+        <p>Encuentra el coche de tus sueños entre nuestras unidades exclusivas.</p>
+    </header>
+
+    <main id="contenedor-coches" class="grid-coches"></main>
+
+    <script src="concesionario.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+  <libro titulo="Crimen y castigo" autor="Fiódor Dostoyevski" anio="1866"/>
+  <libro titulo="La metamorfosis" autor="Franz Kafka" anio="1915"/>
+  <libro titulo="El principito" autor="Antoine de Saint-Exupéry" anio="1943"/>
+  <libro titulo="Ensayo sobre la ceguera" autor="José Saramago" anio="1995"/>
+  <libro titulo="El retrato de Dorian Gray" autor="Oscar Wilde" anio="1890"/>
+  <libro titulo="La sombra del viento" autor="Carlos Ruiz Zafón" anio="2001"/>
+  <libro titulo="Frankenstein" autor="Mary Shelley" anio="1818"/>
+</biblioteca>

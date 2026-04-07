@@ -1,0 +1,10 @@
+Diseña un documento JSON que represente un catálogo con 3 películas. Cada película debe tener:
+
+Título
+Año de estreno
+Género
+Duración en minutos
+Lista de actores principales
+Tareas a realizar:
+
+Crear el JSON con datos de tres películas.
